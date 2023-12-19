@@ -9,6 +9,7 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
   function onSpeak(e){
     chute = e.results[0][0].transcript;
     exibeChuteNaTela(chute);
+    verificaSeOChutePossuiUmValorValido(chute);
   };
   function exibeChuteNaTela(chute){
     elementoChute.innerHTML= `
